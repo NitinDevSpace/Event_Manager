@@ -17,7 +17,9 @@ app.get("/", (req, res) => res.send("API is working"));
 
 // Routes
 const eventRoutes = require("./routes/eventRoutes");
+const userRoutes = require("./routes/userRoutes");
 app.use("/api/events", eventRoutes);
+app.use("/api/users", userRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
